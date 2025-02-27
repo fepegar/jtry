@@ -5,13 +5,13 @@ Create temporary environment, install dependencies, and open Jupyter notebook in
 ## Usage
 
 ```shell
-./jtry <dependencies>
+./jtry.sh <dependencies>
 ```
 
 For example, to create a temporary environment with `matplotlib` and `scipy`:
 
 ```shell
-./jtry matplotlib scipy
+./jtry.sh matplotlib scipy
 ```
 
 Or, using `curl`:
