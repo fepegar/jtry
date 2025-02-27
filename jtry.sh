@@ -8,22 +8,13 @@ cmd="uv init --bare --quiet --python $PYTHON_VERSION $tmp_dir"
 echo "Running $cmd"
 eval $cmd
 
-cmd="uv add --directory $tmp_dir ipykernel ipywidgets rich $@"
+cmd="uv add --directory $tmp_dir ipykernel ipywidgets $@"
 echo "Running $cmd"
 eval $cmd
 
 notebook_contents=$(cat <<EOF
 {
  "cells": [
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "%load_ext rich"
-   ]
-  },
   {
    "cell_type": "code",
    "execution_count": null,
