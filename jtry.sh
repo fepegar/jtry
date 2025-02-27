@@ -4,6 +4,8 @@ PYTHON_VERSION="3.13"
 
 tmp_dir=$(mktemp -d)
 
+code --new-window $tmp_dir
+
 cmd="uv init --bare --quiet --python $PYTHON_VERSION $tmp_dir"
 echo "Running $cmd"
 eval $cmd
@@ -49,6 +51,4 @@ EOF
 )
 echo $notebook_contents > $tmp_dir/notebook.ipynb
 
-code --new-window $tmp_dir
-sleep 1  # wait for VS Code to start before we request to open the notebook
 code --reuse-window $tmp_dir/notebook.ipynb
