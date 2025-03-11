@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PYTHON_VERSION="3.13"
+PYTHON_VERSION="3.12"
 
 tmp_dir=$(mktemp -d)
 
