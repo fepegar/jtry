@@ -4,7 +4,7 @@ PYTHON_VERSION="3.12"
 
 tmp_dir=$(mktemp -d)
 
-cmd="uv init --bare --quiet --python $PYTHON_VERSION $tmp_dir"
+cmd="uv init --quiet --python $PYTHON_VERSION $tmp_dir"
 echo "Running $cmd"
 eval $cmd
 
